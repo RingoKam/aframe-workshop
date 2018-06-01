@@ -11,14 +11,15 @@
   <!--endbuild-->
 </head>
 <body>
-  <a-scene embedded arjs>
+  <a-scene embedded arjs="debugUIEnabled: false;" vr-mode="enabled: false">
       <a-assets>
           <!-- https://poly.google.com/view/ef9Yd09Doxh -->
           <a-asset-item id="libertystatue-obj" src="objects/libertystatue.obj"></a-asset-item>
           <a-asset-item id="libertystatue-mtl" src="objects/libertystatue.mtl"></a-asset-item>      
       </a-assets>
 
-      <a-marker preset="hiro">
+      <!-- <a-marker preset="hiro"> -->
+    <a-marker preset="custom" type="pattern" url="marker.patt" hit-testing-enabled="false">
         <a-obj-model
           src="#libertystatue-obj"
           mtl="#libertystatue-mtl"
